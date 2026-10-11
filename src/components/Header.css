@@ -1,0 +1,55 @@
+.site-header {
+  background: var(--cream);
+  border-bottom: 1px solid var(--border-cream);
+  position: sticky; top: 0; z-index: 200;
+}
+
+.header-inner {
+  max-width: var(--max-w); margin: 0 auto; padding: 0 var(--px);
+  height: 64px; display: flex; align-items: center; gap: 32px;
+}
+
+/* Brand */
+.brand { display:flex; align-items:center; gap:10px; text-decoration:none; flex-shrink:0; }
+.brand-icon {
+  width: 34px; height: 34px; border-radius: var(--r-sm);
+  background: var(--teal-deep);
+  display: flex; align-items: center; justify-content: center;
+}
+.brand-text { display:flex; flex-direction:column; }
+.brand-name {
+  /* Serif brand mark */
+  font-family: var(--font-serif);
+  font-size: 17px; font-weight: 700;
+  color: var(--teal-deep); letter-spacing: -.02em; line-height: 1.1;
+}
+
+/* Nav — Space Grotesk */
+.site-nav { display:flex; align-items:center; gap:2px; flex:1; }
+.nav-link {
+  font-family: var(--font-label);
+  font-size: 13.5px; font-weight: 500; letter-spacing: .02em;
+  color: var(--text-muted); padding: 7px 13px; border-radius: var(--r-sm);
+  text-decoration: none; transition: color var(--ease), background var(--ease);
+}
+.nav-link:hover { color: var(--teal-deep); background: rgba(6,47,48,.06); }
+
+/* Right */
+.header-right { display:flex; align-items:center; gap:12px; margin-left:auto; flex-shrink:0; }
+
+.synth-pill {
+  font-family: var(--font-label); font-size: 10.5px; font-weight: 600;
+  letter-spacing: .08em; text-transform: uppercase;
+  color: var(--teal-dark); background: var(--teal-pale);
+  border: 1px solid #A0CFCC; padding: 4px 10px; border-radius: var(--r-xs);
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .site-nav { display: none; }
+}
+@media (max-width: 480px) {
+  .header-inner { height: 54px; gap: 12px; }
+  .synth-pill { display: none; }
+  .brand-name { font-size: 15px; }
+}

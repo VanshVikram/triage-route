@@ -1,0 +1,115 @@
+.hero {
+  background: var(--teal-deep);
+  padding: 64px 0 0;
+  overflow: hidden;
+}
+
+.hero-inner {
+  max-width: var(--max-w); margin: 0 auto; padding: 0 var(--px);
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 48px;
+  align-items: end;
+  min-height: 520px;
+}
+
+/* ── Text side ── */
+.hero-text {
+  display: flex; flex-direction: column; gap: 22px;
+  padding-bottom: 64px;
+}
+
+.hero-h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.75rem, 5.5vw, 4.625rem);
+  font-weight: 700;
+  color: var(--cream);
+  letter-spacing: -.025em;
+  line-height: 1.1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Yellow italic accent — Playfair italic */
+.hero-h1-accent {
+  display: block;
+  color: var(--yellow);
+  font-style: normal; /* wrapper — em inside carries italic */
+}
+.hero-h1-accent em {
+  font-style: italic;
+  font-weight: 600;
+}
+
+.hero-desc {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.72;
+  color: rgba(245,243,222,.72);
+  max-width: 440px;
+  font-weight: 400;
+}
+
+.hero-synth-note {
+  display: flex; align-items: center; gap: 9px;
+  font-family: var(--font-label);
+  font-size: 11.5px; font-weight: 500;
+  letter-spacing: .06em;
+  color: rgba(245,243,222,.45);
+}
+.synth-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--yellow); flex-shrink: 0; opacity: .65;
+}
+
+.hero-ctas {
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  padding-top: 4px;
+}
+
+/* ── Photo side — landscape 4:3, bleeds to bottom ── */
+.hero-photo-wrap {
+  border-radius: var(--r-xl) var(--r-xl) 0 0;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  max-height: 440px;
+  align-self: end;
+  /* Subtle teal tint around image */
+  box-shadow: 0 -4px 40px rgba(6,47,48,.6);
+}
+
+.hero-photo {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+
+/* ── Responsive ── */
+@media (max-width: 960px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    align-items: start;
+    min-height: auto;
+  }
+  .hero-photo-wrap {
+    border-radius: var(--r-xl);
+    aspect-ratio: 16 / 9;
+    max-height: 300px;
+    align-self: auto;
+    box-shadow: none;
+  }
+  .hero-text { padding-bottom: 0; }
+  .hero { padding: 48px 0 40px; }
+  .hero-h1 { font-size: 2.625rem; }
+}
+
+@media (max-width: 600px) {
+  .hero { padding: 36px 0 32px; }
+  .hero-h1 { font-size: 2.125rem; gap: 2px; }
+  .hero-desc { font-size: 16px; }
+  .hero-ctas { flex-direction: column; align-items: flex-start; }
+  .hero-photo-wrap { aspect-ratio: 4/3; max-height: 240px; }
+}

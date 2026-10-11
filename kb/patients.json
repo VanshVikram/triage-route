@@ -1,0 +1,10 @@
+[
+  {"id": "P001", "age": 58, "sex": "M", "history": ["type 2 diabetes", "prior MI (heart attack)", "hypertension"]},
+  {"id": "P002", "age": 24, "sex": "F", "history": []},
+  {"id": "P003", "age": 30, "sex": "M", "history": []},
+  {"id": "P004", "age": 67, "sex": "F", "history": ["hypertension", "atrial fibrillation"]},
+  {"id": "P005", "age": 8,  "sex": "M", "history": []},
+  {"id": "P006", "age": 45, "sex": "M", "history": ["type 2 diabetes"]},
+  {"id": "P007", "age": 72, "sex": "M", "history": ["COPD", "hypertension"]},
+  {"id": "P008", "age": 35, "sex": "F", "history": ["asthma"]}
+]

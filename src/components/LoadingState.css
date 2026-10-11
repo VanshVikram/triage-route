@@ -1,0 +1,45 @@
+.loading-wrap { padding: 40px 0 60px; }
+
+.loading-card {
+  max-width: 540px; margin: 0 auto;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--r-xl); box-shadow: var(--shadow-md); padding: 32px;
+}
+
+.loading-header {
+  display:flex; align-items:center; gap:18px;
+  padding-bottom:22px; border-bottom:1px solid var(--border); margin-bottom:20px;
+}
+
+.loading-spinner {
+  width:38px; height:38px; flex-shrink:0;
+  border:3px solid var(--border);
+  border-top-color:var(--teal-dark);
+  border-radius:50%;
+  animation:spin 0.85s linear infinite;
+}
+
+.loading-title { font-family:var(--font-body); font-size:1.0625rem; font-weight:700; color:var(--text-dark); margin-bottom:4px; letter-spacing:-.01em; }
+.loading-sub   { font-size:14px; color:var(--text-muted); }
+
+.loading-flow { display:flex; align-items:center; gap:6px; margin-bottom:22px; flex-wrap:wrap; }
+.flow-row { display:flex; align-items:center; gap:6px; }
+.flow-node { font-size:11.5px; color:var(--text-light); padding:3px 9px; border:1px solid var(--border); border-radius:var(--r-sm); background:var(--bg-section); white-space:nowrap; font-family:var(--font-label); letter-spacing:.03em; }
+.flow-active { color:var(--teal-dark); border-color:var(--teal-pale); background:var(--teal-pale); font-weight:600; }
+.flow-arr { font-size:12px; color:var(--border); }
+
+.ls-steps { display:flex; flex-direction:column; gap:7px; }
+.ls-step  { display:flex; align-items:center; gap:10px; padding:6px 10px; border-radius:var(--r-sm); transition:background var(--ease); }
+.ls-act   { background:var(--teal-pale); }
+
+.ls-icon { width:20px; height:20px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.ls-done .ls-icon { background:var(--teal-dark); color:#fff; }
+.ls-act  .ls-icon { border:2px solid var(--teal-dark); }
+.ls-step:not(.ls-done):not(.ls-act) .ls-icon { border:2px solid var(--border); }
+
+.ls-pulse { width:8px; height:8px; border-radius:50%; background:var(--teal-dark); animation:pulse-teal 1.2s ease-in-out infinite; }
+.ls-dot   { width:6px; height:6px; border-radius:50%; background:var(--border); }
+
+.ls-lbl { font-size:13px; color:var(--text-muted); font-family:var(--font-body); }
+.ls-done .ls-lbl { color:var(--text-dark); font-weight:500; }
+.ls-act  .ls-lbl { color:var(--teal-dark); font-weight:600; }

@@ -1,0 +1,93 @@
+.approach-section {
+  background: var(--cream);
+  border-top: 1px solid var(--border-cream);
+  border-bottom: 1px solid var(--border-cream);
+  padding: 80px 0;
+}
+
+.approach-inner {
+  max-width: var(--max-w); margin: 0 auto; padding: 0 var(--px);
+  display: flex; flex-direction: column; gap: 52px;
+}
+
+/* Header */
+.approach-header {
+  display: grid; grid-template-columns: 160px 1fr; gap: 48px; align-items: start;
+}
+.approach-label-col { padding-top: 10px; }
+
+.approach-h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.5vw, 2.875rem);
+  font-weight: 700; color: var(--teal-deep);
+  letter-spacing: -.025em; line-height: 1.18;
+  margin-bottom: 18px;
+}
+
+/* Italic serif highlight */
+.approach-h2-em {
+  font-style: italic;
+  font-weight: 600;
+  color: var(--teal-mid);
+}
+
+.approach-body {
+  font-family: var(--font-body);
+  font-size: 17px; color: var(--text-muted);
+  line-height: 1.75; max-width: 580px; font-weight: 400;
+}
+
+/* Steps grid */
+.approach-steps {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 1px; background: var(--border-cream);
+  border-radius: var(--r-lg); overflow: hidden;
+}
+
+.approach-step {
+  background: var(--cream); padding: 28px 22px;
+  display: flex; flex-direction: column; gap: 14px;
+  transition: background var(--ease);
+}
+.approach-step:hover { background: #EDEBC8; }
+
+.step-num-wrap {
+  width: 36px; height: 36px; border-radius: var(--r-sm);
+  background: var(--teal-deep);
+  display: flex; align-items: center; justify-content: center;
+}
+.step-num {
+  font-family: var(--font-label);
+  font-size: 12px; font-weight: 700;
+  color: var(--yellow); letter-spacing: .06em;
+}
+
+.step-head {
+  font-family: var(--font-body);
+  font-size: 14.5px; font-weight: 600;
+  color: var(--teal-deep); margin-bottom: 6px;
+  letter-spacing: -.005em;
+}
+.step-body {
+  font-family: var(--font-body);
+  font-size: 13.5px; color: var(--text-muted); line-height: 1.65;
+}
+
+/* Footer note */
+.approach-footer-note {
+  font-family: var(--font-body);
+  font-size: 13px; color: var(--text-light);
+  border-top: 1px solid var(--border-cream); padding-top: 22px; line-height: 1.65;
+}
+.approach-footer-note strong { color: var(--text-muted); font-weight: 600; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .approach-header { grid-template-columns: 1fr; gap: 20px; }
+  .approach-steps  { grid-template-columns: repeat(2, 1fr); }
+  .approach-section { padding: 56px 0; }
+}
+@media (max-width: 560px) {
+  .approach-steps { grid-template-columns: 1fr; }
+  .approach-h2 { font-size: 1.875rem; }
+}
